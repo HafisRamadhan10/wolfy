@@ -1,0 +1,58 @@
+.socialmedia-banner {
+  background-color: myvar(colorPrimary3) !important;
+
+  .border-right {
+    border-right: 0 !important;
+
+    @include media-breakpoint-up(md) {
+      border-right: 1px solid $color-placeholder !important;
+    }
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .social {
+    background-color: myvar(colorSecondary);
+    color: white;
+    width: 36px;
+    height: 37px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+    margin: 10px 10px;
+    font-weight: 100;
+    transition: all 0.3s ease-in-out;
+
+    @include media-breakpoint-up(md) {
+      width: 56px;
+      height: 57px;
+      font-size: 26px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 76px;
+      height: 77px;
+      font-size: 36px;
+    }
+
+    &:hover {
+      background-color: white;
+      color: myvar(colorSecondary);
+      transition: all 0.3s ease-in-out;
+    }
+
+    i {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.wp-block-column {
+  align-self: center;
+}

@@ -1,0 +1,41 @@
+.wp-block-uagb-section {
+  &.dark-text {
+    color: $color-charcoal !important;
+  }
+
+  &.white-text {
+    color: $white !important;
+  }
+
+  &.uagb-section__background-color {
+    .gform_wrapper {
+      input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.wp-block-separator {
+  margin: 3rem 0;
+}
+
+div.wp-block-media-text {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Add vertical breathing room to the full row of columns. */
+.wp-block-columns {
+  @extend .row;
+}
+
+/* Add horiztonal breathing room between individual columns. */
+.wp-block-column {
+  margin: 0 !important;
+  flex-basis: 0 !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+
+  @extend .col;
+}

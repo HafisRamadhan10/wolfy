@@ -1,0 +1,62 @@
+.btn {
+  border-radius: 0;
+  padding: 18px 10px;
+}
+
+.btn-main {
+  display: inline-block;
+  appearance: none;
+  background-color: white;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  text-align: center;
+  padding: 18px 10px;
+  min-width: 135px;
+  font-weight: 600;
+  max-width: 100%;
+
+  @include media-breakpoint-up(md) {
+    min-width: 195px;
+  }
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+  }
+
+  &.banner-cta {
+    @include media-breakpoint-up(md) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &-small {
+    font-weight: 600;
+    padding: 3px 10px;
+    min-width: 120px;
+
+    @include media-breakpoint-up(md) {
+      min-width: 140px;
+    }
+  }
+
+  &-long {
+    @include media-breakpoint-up(xl) {
+      padding: 16px 10px;
+      min-width: 315px;
+    }
+  }
+}
+
+.wp-block-button__link {
+  @extend .btn-main;
+  @extend .banner-cta;
+}

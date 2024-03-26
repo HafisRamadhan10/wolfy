@@ -1,0 +1,222 @@
+@import "common/variables";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/** Gutenberg Overides */
+#editor .edit-post-visual-editor .wp-block {
+  @import "./autoload/**/*";
+  @import "components/s360-fonts";
+  @import "common/s360-functions";
+  @import "common/s360-mixins";
+  @import "common/s360-global";
+  @import "components/s360-buttons";
+  @import "common/global";
+  @import "components/buttons";
+  @import "components/comments";
+  @import "components/forms";
+  @import "components/wp-classes";
+  @import "components/banners";
+  @import "components/upcomingEvent";
+  @import "components/socialmedia-banner";
+  @import "components/accors";
+  @import "components/quoteCarousel";
+  @import "components/cta";
+  @import "components/latest-post";
+  @import "layouts/header";
+  @import "layouts/sidebar";
+  @import "layouts/footer";
+  @import "layouts/pages";
+  @import "layouts/posts";
+  @import "layouts/tinymce";
+
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: 13px;
+
+  .editor-post-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button {
+    overflow: hidden;
+  }
+
+  .wp-editor-tabs,
+  .wp-editor-tabs button {
+    box-sizing: content-box;
+  }
+
+  .button,
+  .button-primary,
+  .button-secondary {
+    height: inherit;
+  }
+
+  .button-primary,
+  .acf-button {
+    background-color: #0085ba;
+    color: white;
+    text-shadow: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  textarea,
+  p {
+    margin: 1em 0 !important;
+    font-family: $font-primary;
+    font-weight: 300;
+    line-height: 1.4em;
+  }
+
+  .editor-post-title__input {
+    font-size: 36px;
+    font-weight: 900;
+    font-family: $font-primary;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  ul.mce-content-body {
+    padding-left: 20px;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 5px;
+
+      &::before {
+        content: '.';
+        font-size: 27px;
+        line-height: 7px;
+        position: absolute;
+        left: -20px;
+      }
+    }
+  }
+
+  .has-3-columns {
+    &.content-blocks {
+      .wp-block[data-type='core/column'] {
+        .wp-block-image {
+          text-align: center;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        margin-top: 5px;
+        display: block;
+      }
+
+      &-icon {
+        .wp-block[data-type='core/column'] {
+          position: relative;
+          padding: 0 20px;
+
+          @media (min-width: 782px) {
+            padding: 0 30px;
+          }
+
+          &::after {
+            @media (min-width: 782px) {
+              content: '';
+              position: absolute;
+              right: -12px;
+              top: 0;
+              height: 100%;
+              //width: 100%;
+              border-right: 1px solid $color-placeholder;
+            }
+          }
+
+          &:not(:last-child),
+          &:not(:first-child) {
+            @media (min-width: 782px) {
+              margin-left: 12px;
+            }
+          }
+
+          &:not(:last-child) {
+            @media (min-width: 782px) {
+              margin-right: 12px;
+            }
+          }
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &:nth-child(3n) {
+            &::after {
+              display: none;
+            }
+          }
+
+          .wp-block-image {
+            text-align: center;
+
+            img {
+              width: 60px;
+              height: 60px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .wp-block-column {
+          &::after {
+            border-right-width: 0 !important;
+          }
+        }
+
+        a {
+          text-transform: uppercase;
+          margin-top: 5px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .wp-block-quote {
+    border: 0;
+    padding-left: 0;
+  }
+
+  .wp-block-uagb-section {
+    &.dark-text {
+      .editor-rich-text,
+      .acf-block-preview {
+        color: $color-charcoal !important;
+      }
+    }
+
+    &.white-text {
+      .editor-rich-text,
+      .acf-block-preview {
+        color: $white !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .edit-post-visual-editor .editor-post-title,
+  .edit-post-visual-editor .wp-block {
+    max-width: 1070px;
+  }
+
+  .edit-post-visual-editor .wp-block[data-align="full"] {
+    max-width: 100vw;
+  }
+}

@@ -1,0 +1,65 @@
+.event-wrap {
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(sm) {
+    width: 460px;
+    margin: 0 auto;
+  }
+
+  .events {
+    padding-top: 10px;
+    margin-bottom: 30px;
+
+    .content-event {
+      margin-bottom: 5px;
+
+      .left-col {
+        .date-box {
+          background-color: myvar(colorPrimary);
+          height: 100%;
+          text-align: center;
+          padding: 25px 30%;
+          font-weight: bold;
+
+          .month,
+          .day {
+            color: white;
+          }
+
+          .day {
+            font-size: 21px;
+            line-height: 21px;
+          }
+
+          .month {
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      .right-col {
+        padding-top: 15px;
+
+        @include media-breakpoint-up(sm) {
+          border-top: 2px solid $color-grey2;
+          padding: 15px;
+        }
+
+        header {
+          h2 {
+            font-size: 14px;
+            color: myvar(colorSecondary);
+          }
+        }
+
+        .entry-summary {
+          p {
+            font-size: 14px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

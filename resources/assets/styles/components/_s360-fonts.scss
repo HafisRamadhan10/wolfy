@@ -1,0 +1,39 @@
+/* stylelint-disable */
+//Fonts
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/Century Gothic.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/Century Gothic Bold.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/Century Gothic Bold Italic.otf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/Century Gothic Italic.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+$min-vw             : 320px;
+$max-vw             : 1200px;
+
+
+/** FONTS **/
+$font-primary                  : 'Century Gothic', sans-serif;
+$font-titles                   : 'Century Gothic', serif;
+$font-menu                     : 'Century Gothic', serif;
+

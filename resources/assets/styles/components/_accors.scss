@@ -1,0 +1,128 @@
+/* stylelint-disable */
+
+.white-text {
+  .accor-icon {
+    color: $white !important;
+  }
+}
+
+.accordion-wrap {
+  .accor-wrap {
+    border: 1px solid #bdbdbd;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 20px;
+    }
+
+    &.show {
+      border: 2px solid black;
+    }
+  }
+
+  .btn-accordion {
+    appearance: none;
+    width: 100%;
+    text-align: left;
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+    padding: 20px;
+
+    &:last-child {
+      //border: 0;
+    }
+
+    .accor-title {
+      position: relative;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+
+      .accor-text {
+        font-family: $font-primary;
+        width: 90%;
+        display: inline-block;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        line-height: 18px;
+        font-weight: 600;
+        color: #333;
+        font-size: 15px;
+      }
+
+      img {
+        width: 12px;
+        height: 12px;
+        object-fit: contain;
+
+        @include media-breakpoint-up(md) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .accor-icon,
+      img {
+        position: absolute;
+        right: 0;
+        color: myvar(colorSecondary);
+        font-size: 16px;
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .accor-content {
+      color: $color-charcoal;
+      font-weight: 100;
+
+      p,
+      i,
+      span,
+      li {
+        color: inherit;
+        line-height: 18px;
+        letter-spacing: 2px;
+
+        @include media-breakpoint-up(lg) {
+          line-height: 28px;
+        }
+      }
+    }
+
+    &:hover {
+      .accor-text,
+      .accor-icon {
+        //color: myvar(colorSecondaryDark);
+      }
+    }
+
+    &.collapsed {
+      .accor-icon,
+      img {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .accor-content {
+    padding: 20px;
+    padding-right: 50px;
+    font-size: 15px;
+
+    p,
+    i,
+    span,
+    li {
+      line-height: 18px;
+      letter-spacing: 2px;
+      font-size: 15px;
+
+      @include media-breakpoint-up(lg) {
+        line-height: 28px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+@import "~animate.css/animate.min.css";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~owl.carousel2/dist/assets/owl.carousel.min.css";
+//@import "~paroller.js/assets/style.css";
+
+/** Import Starter WP theme styles */
+@import "components/s360-fonts";
+@import "common/s360-functions";
+@import "common/s360-mixins";
+@import "common/s360-global";
+@import "components/s360-buttons";
+
+/** Import theme styles */
+@import "common/global";
+@import "components/global-blocks";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/fc-forms";
+@import "components/wp-classes";
+@import "components/banners";
+@import "components/upcomingEvent";
+@import "components/socialmedia-banner";
+@import "components/accors";
+@import "components/quoteCarousel";
+@import "components/cta";
+@import "components/latest-post";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+

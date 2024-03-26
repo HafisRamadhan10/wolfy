@@ -1,0 +1,6 @@
+button {
+  @include hovers() {
+    outline: none;
+    box-shadow: none;
+  }
+}

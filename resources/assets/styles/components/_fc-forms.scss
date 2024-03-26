@@ -1,0 +1,243 @@
+/* FC Form */
+.form-header {
+  text-align: center;
+}
+
+.fc {
+  font-family: inherit !important;
+  color: inherit !important;
+  font-weight: 400 !important;
+
+  #titleLabel {
+    display: none !important;
+  }
+
+  .wrapper-container {
+    @media (min-width: 900px) {
+      width: 620px;
+    }
+  }
+
+  .form-group,
+  .wrapper-label .label-field {
+    margin-bottom: 0 !important;
+  }
+
+  .form-group {
+    .small {
+      margin: 0;
+      min-height: 21px;
+    }
+  }
+
+  label {
+    font-family: inherit !important;
+    color: inherit !important;
+    font-size: inherit;
+  }
+
+  .cent {
+    font-size: 12px;
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    margin-top: 0 !important;
+    margin-right: 10px;
+    appearance: none;
+    height: 15px;
+    width: 15px !important;
+    border: 2px solid $color-grey;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:checked ~ label {
+      position: relative;
+
+      &::before {
+        content: '✔';
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: -5px;
+        left: -23px;
+        bottom: 0;
+        right: 0;
+        font-size: 16px;
+        color: myvar(colorSecondary);
+      }
+    }
+  }
+
+  input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  select {
+    background-color: $color-grey2;
+    color: $color-charcoal;
+    border: 0 !important;
+    font-size: 12px;
+    padding: 7px 10px;
+    margin-top: 0 !important;
+    margin-bottom: 5px;
+    border-radius: 0 !important;
+    font-family: inherit !important;
+    font-weight: 400 !important;
+  }
+
+  .section {
+    margin-bottom: 10px;
+
+    &::after {
+      border-top: 2px solid rgba($color-grey, 0.5);
+    }
+
+    #fi {
+      .form-paragraph {
+        font-weight: 700;
+      }
+    }
+
+    &#section-1,
+    &#section-2,
+    &#section-3,
+    &#section-4 {
+      @include media-breakpoint-up(lg) {
+        width: 50% !important;
+        align-self: start;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &#section-1 {
+      order: 0;
+    }
+
+    &#section-2 {
+      order: 2;
+    }
+
+    &#section-3 {
+      order: 1;
+
+      .form-paragraph {
+        font-weight: 400;
+        font-size: 12px;
+      }
+
+      .rb-amount-fs {
+        padding: 0;
+        border: 0;
+
+        .rb-amount-le {
+          margin: 0;
+        }
+
+        .amount-other,
+        .rb-amount-ra {
+          input {
+            top: 2px;
+          }
+        }
+
+        .rb-amount-ra {
+          li {
+            &::before {
+              display: none;
+            }
+
+            input {
+              top: 2px;
+            }
+          }
+        }
+
+        .amount-other {
+          input:checked ~ label {
+            &::before {
+              left: -26px;
+            }
+          }
+        }
+      }
+    }
+
+    &#section-4 {
+      order: 3;
+    }
+
+    &#summary-section {
+      order: 4;
+      border-top: 2px solid rgba($color-grey, 0.5);
+      padding-top: 20px;
+    }
+
+    #employerInformationLabel {
+      font-size: 12px;
+    }
+  }
+
+  .wrapper-parent-container {
+    &:first-child {
+      padding: 0 10px;
+      margin: 0 auto;
+      max-width: 300px;
+      justify-content: flex-start;
+      text-align: left;
+
+      @media (min-width: 900px) {
+        max-width: 610px;
+      }
+    }
+  }
+
+  .submitBtn {
+    display: inline-block;
+    appearance: none !important;
+    color: white !important;
+    background-color: myvar(colorSecondary) !important;
+    font-size: 14px;
+    border: 1px solid myvar(colorSecondary) !important;
+    transition: all 0.3s ease-in-out !important;
+    opacity: 1;
+    text-align: center;
+    padding: 4px 10px;
+    min-width: 130px !important;
+    border-radius: 30px !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    font-family: $font-primary !important;
+
+    @include media-breakpoint-up(md) {
+      min-width: 140px !important;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      max-width: 220px;
+    }
+
+    &:hover {
+      transition: all 0.3s ease-in-out !important;
+      background-color: myvar(colorSecondaryDark) !important;
+      border-color: myvar(colorSecondaryDark) !important;
+      //opacity: 0.7;
+      cursor: pointer;
+      color: white !important;
+    }
+  }
+
+  /* Petition Form */
+  .wb {
+    width: 460px !important;
+    max-width: 100%;
+
+    #messageWrite {
+      background-color: $color-grey2;
+    }
+  }
+
+  /* End Petition Form */
+}
+
+/* END FC FORM */
+
