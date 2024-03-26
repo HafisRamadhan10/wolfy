@@ -72,7 +72,7 @@
   </nav>
 </header>
 
-<header id="header" class="mobile-view d-lg-none">
+<header id="header" class="mobile-view">
   <nav class="navbar navbar-expand-lg" id="main-navbar">
     <div class="container header-height">
       <a class="navbar-brand <?php if (!has_nav_menu('primary_navigation')) { echo 'center-logo'; } ?>" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
@@ -90,24 +90,24 @@
 
     <?php $menu = wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav mr-auto align-items-lg-center',  'menu_id' => 'nav-primary', 'echo' => false]); ?>
       @if ((has_nav_menu('primary_navigation')) && ($menu !== false))
-        <button class="hamburger hamburger--elastic navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="hamburger hamburger--elastic" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
         </button>
-        <div class="collapse navbar-collapse justify-content-lg-end align-items-lg-stretch" id="navbarSupportedContent">
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav mr-auto align-items-lg-center',  'menu_id' => 'nav-primary']) !!}
+        <div class="collapse align-items-lg-stretch" id="navbarSupportedContent">
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav mr-auto',  'menu_id' => 'nav-primary']) !!}
         </div>
       @endif
 
-      <div class="btn-book">
+      <div class="btn-book d-none">
         <a href="<?php echo $book_now_button['url'] ?>"><?php echo $book_now_button['title'] ?></a>
       </div>
     </div>
   </nav>
 </header>
 
-<header id="header" class="dekstop-view d-none d-lg-block">
+<header id="header" class="dekstop-view d-none">
   <nav class="navbar navbar-expand-lg" id="main-navbar">
     <div class="d-flex header-height">
       <?php $menu = wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav mr-auto align-items-lg-center',  'menu_id' => 'nav-primary', 'echo' => false]); ?>
