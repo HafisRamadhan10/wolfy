@@ -201,6 +201,25 @@ function my_acf_init() {
                 'mode' => 'edit',
             ),
         ));
+
+        acf_register_block(array(
+            'name'              => 'gallery',
+            'title'             => __('Gallery'),
+            'description'       => __('Gallery'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'formatting',
+            'icon' => array(
+                'background' => '#ededed',
+                'foreground' => '#5e5e5e',
+                'src' => 'format-image',
+            ),
+            'keywords' => array( 'gallery' ),
+            'mode' => 'edit',
+            'align' => 'full',
+            'supports' => array(
+                'mode' => 'edit',
+            ),
+        ));
     }
 }
 

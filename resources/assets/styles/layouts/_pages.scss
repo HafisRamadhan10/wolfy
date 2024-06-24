@@ -588,3 +588,24 @@
     }
   }
 }
+
+.gallery {
+  .wrapper {
+    .media-details {
+      .wrap-img {
+        height: 200px;
+
+        @include media-breakpoint-up(xl) {
+          height: 250px;
+        }
+
+        img,
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
