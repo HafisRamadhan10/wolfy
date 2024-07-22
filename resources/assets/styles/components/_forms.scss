@@ -69,8 +69,8 @@ select {
   margin: 2em auto;
   padding: 20px;
   text-align: center;
-  border: 1px solid $color-success;
-  color: $color-success;
+  border: 1px solid white;
+  color: white;
 }
 
 .reverse-color {
@@ -166,7 +166,6 @@ select {
       margin-bottom: 10px;
 
       @include media-breakpoint-up(lg) {
-        padding-left: 15px;
         font-size: 25px;
         margin-bottom: 25px;
       }

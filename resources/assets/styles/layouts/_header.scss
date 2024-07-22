@@ -173,9 +173,10 @@
               }
 
               &:hover {
-                color: black;
+                color: white;
                 font-weight: bold;
                 transition: all 0.3s ease;
+                text-decoration: underline;
               }
             }
 
@@ -185,7 +186,7 @@
                 @include media-breakpoint-up(lg) {
                   font-weight: 700;
                   color: white;
-                  background-color: myvar(colorSecondary);
+                  text-decoration: underline;
                 }
               }
             }

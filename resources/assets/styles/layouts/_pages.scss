@@ -609,3 +609,43 @@
     }
   }
 }
+
+.pendaftaran {
+  .banners-basic {
+    .img-bg {
+      @include media-breakpoint-up(md) {
+        object-position: center -340px !important;
+      }
+
+      @include media-breakpoint-up(xl) {
+        object-position: center -730px !important;
+      }
+    }
+  }
+  .wp-block-social-links {
+    margin-bottom: 0;
+    padding: 0 !important;
+
+    .wp-social-link {
+      margin-right: 10px;
+
+      .wp-block-social-link-anchor {
+        color: white;
+        font-size: 40px;
+        fill: white;
+
+        &:hover {
+          svg {
+            fill: white;
+          }
+        }
+      }
+
+      &.wp-social-link-tiktok {
+        .wp-block-social-link-anchor {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

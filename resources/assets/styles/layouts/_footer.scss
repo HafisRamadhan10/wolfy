@@ -167,7 +167,11 @@ footer.content-info {
   }
 
   .navbar-brand {
-    max-width: 200px;
+    max-width: 250px;
+
+    @include media-breakpoint-up(md) {
+      max-width: 400px;
+    }
 
     img {
       width: 100%;

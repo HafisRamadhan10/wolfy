@@ -577,12 +577,13 @@ small {
     margin: 0 10px;
 
     .wp-block-social-link-anchor {
-      color: white;
+      color: black;
       font-size: 40px;
+      fill: black;
 
       &:hover {
         svg {
-          fill: white;
+          fill: black;
         }
       }
     }
